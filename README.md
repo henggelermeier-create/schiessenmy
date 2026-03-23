@@ -1,11 +1,21 @@
-FROM nginx:1.27-alpine
+# myswisstarget.ch – Coolify einfach
 
-COPY public/ /usr/share/nginx/html/
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+Dieses Repo ist nur für die Verkaufswebseite gedacht.
 
-RUN test -f /usr/share/nginx/html/index.html \
- && nginx -t
+## Inhalt
+- Dockerfile
+- nginx.conf
+- public/
 
-EXPOSE 80
+## In Coolify eintragen
+- Build Pack: Dockerfile
+- Base Directory: /
+- Dockerfile Location: /Dockerfile
+- Domain: https://myswisstarget.ch
+- Exposed Port: 80
+- Port Mappings: leer
+- Health Check Path: /health
 
-CMD ["nginx", "-g", "daemon off;"]
+## Wichtig
+Dieses Repo ist nur für die Website.
+Es darf keine App-, API- oder Datenbank-Dateien enthalten.
