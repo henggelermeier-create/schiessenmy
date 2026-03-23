@@ -1,21 +1,65 @@
-# myswisstarget.ch – Coolify einfach
+# mySwissTarget.ch – Premium Website mit Bestellformular
 
-Dieses Repo ist nur für die Verkaufswebseite gedacht.
+Diese Version enthält:
+- Verkaufswebseite für mySwissTarget.ch
+- Bestellformular unter `public/bestellung.html`
+- Admin-Demo unter `public/adminbereich.html`
+- Nginx / Dockerfile für Coolify
 
-## Inhalt
-- Dockerfile
-- nginx.conf
-- public/
-
-## In Coolify eintragen
+## Coolify
 - Build Pack: Dockerfile
 - Base Directory: /
 - Dockerfile Location: /Dockerfile
 - Domain: https://myswisstarget.ch
-- Exposed Port: 80
-- Port Mappings: leer
-- Health Check Path: /health
+- Healthcheck: /health
 
-## Wichtig
-Dieses Repo ist nur für die Website.
-Es darf keine App-, API- oder Datenbank-Dateien enthalten.
+## Bestellformular
+Das Bestellformular ist frontend-seitig vollständig eingebaut und rechnet:
+- 1 Monat Probeabo
+- Basis CHF 25 / Monat
+- Basis + Pro CHF 35 / Monat
+- Rechnung, TWINT oder Karte
+
+### Live-Anbindung
+Die Live-Endpunkte werden in `public/config.js` hinterlegt:
+- `orderApiUrl`
+- `invoiceApiUrl`
+- `checkoutApiUrl`
+- `twintCheckoutUrl`
+- `cardCheckoutUrl`
+
+### Erwartetes JSON an das Backend
+```json
+{
+  "plan": "basis" | "basis_pro",
+  "club_name": "...",
+  "contact_name": "...",
+  "email": "...",
+  "phone": "...",
+  "street": "...",
+  "zip_city": "...",
+  "payment_method": "invoice" | "twint" | "card",
+  "trial_months": "1",
+  "notes": "...",
+  "accept_trial": true,
+  "accept_terms": true,
+  "monthly_price_chf": 25 | 35
+}
+```
+
+### Erwartete Antwort
+Für Rechnung genügt z. B.:
+```json
+{
+  "message": "Bestellung erhalten. Probeabo aktiviert.",
+  "order_id": "SW-1001"
+}
+```
+
+Für TWINT oder Karte kann das Backend zusätzlich liefern:
+```json
+{
+  "checkout_url": "https://checkout.example.com/session/..."
+}
+```
+Dann leitet das Formular automatisch weiter.
