@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adminbereich Demo – mySwissTarget.ch</title>
+  <meta name="description" content="Demo für Kunden, Abos, Zahlungen und Freischaltungen in SwissTarget.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header page-header-solid">
+    <nav class="navbar">
+      <a class="brand" href="index.html">mySwissTarget.ch</a>
+      <div class="nav-links">
+        <a class="nav-pill" href="index.html#module">Module</a>
+        <a class="nav-pill" href="index.html#preise">Preise</a>
+        <a class="btn app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="container">
+        <a class="back-link" href="index.html">← Zurück zur Startseite</a>
+        <div class="section-headline">
+          <span class="eyebrow">Adminbereich Demo</span>
+          <h1>Kunden, Abos, Zahlungen und Freischaltungen in einem klaren Bereich.</h1>
+          <p class="lead max-copy">Diese Seite zeigt, wie der Adminbereich für SwissTarget aufgebaut sein kann: einfach, verständlich und auf Vereine sowie Supportfälle im Alltag zugeschnitten.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container admin-demo-grid">
+        <div class="demo-panel big-panel">
+          <div class="panel-title-row">
+            <h2>Übersicht</h2>
+            <span class="status-pill active">12 aktiv</span>
+          </div>
+          <div class="demo-stat-grid">
+            <div class="demo-stat"><strong>28</strong><span>Vereine</span></div>
+            <div class="demo-stat"><strong>7</strong><span>Probeabo</span></div>
+            <div class="demo-stat"><strong>5</strong><span>Rechnung offen</span></div>
+            <div class="demo-stat"><strong>CHF 3’240</strong><span>Monatsumsatz</span></div>
+          </div>
+        </div>
+        <div class="demo-panel">
+          <h3>Bestellablauf</h3>
+          <ul class="clean-list">
+            <li>Paket wählen: Basis oder Basis + Pro</li>
+            <li>Vereinsdaten erfassen</li>
+            <li>Rechnung, TWINT oder Karte wählen</li>
+            <li>1 Monat Probeabo startet sofort</li>
+            <li>Nach Zahlung bleibt das System aktiv</li>
+          </ul>
+        </div>
+        <div class="demo-panel">
+          <h3>Statuslogik</h3>
+          <div class="status-list">
+            <span class="status-pill trial">trial</span>
+            <span class="status-pill pending">pending_payment</span>
+            <span class="status-pill active">active</span>
+            <span class="status-pill paused">suspended</span>
+            <span class="status-pill cancelled">cancelled</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container admin-table-shell">
+        <div class="panel-title-row">
+          <h2>Kunden &amp; Abos</h2>
+          <a class="secondary-btn" href="index.html#admin-abo">Zur Beschreibung</a>
+        </div>
+        <div class="table-wrap">
+          <table class="demo-table">
+            <thead>
+              <tr>
+                <th>Verein</th>
+                <th>Paket</th>
+                <th>Zahlung</th>
+                <th>Status</th>
+                <th>Freigabe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SG Musterfeld</td>
+                <td>Basis + Pro</td>
+                <td>TWINT</td>
+                <td><span class="status-pill active">active</span></td>
+                <td>Sofort</td>
+              </tr>
+              <tr>
+                <td>FSV Alpenblick</td>
+                <td>Basis</td>
+                <td>Rechnung</td>
+                <td><span class="status-pill trial">trial</span></td>
+                <td>30 Tage Probeabo</td>
+              </tr>
+              <tr>
+                <td>PS Bergtal</td>
+                <td>Basis + Pro</td>
+                <td>Karte</td>
+                <td><span class="status-pill active">active</span></td>
+                <td>Sofort</td>
+              </tr>
+              <tr>
+                <td>SG Talboden</td>
+                <td>Basis</td>
+                <td>Rechnung</td>
+                <td><span class="status-pill pending">offen</span></td>
+                <td>Support-Override möglich</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-last">
+      <div class="container">
+        <div class="cta-banner">
+          <span class="eyebrow">SwissTarget Admin</span>
+          <h2>Sauberer Überblick statt unnötig komplizierter Administration.</h2>
+          <p>Diese Demo zeigt den Aufbau. Die echte Backend-Anbindung für Kunden, Abos, Zahlungen und Freischaltung kann später direkt mit der SwissTarget-App verbunden werden.</p>
+          <div class="actions center-actions">
+            <a class="btn app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
