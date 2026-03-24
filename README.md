@@ -1,49 +1,72 @@
-# SwissTarget Stripe FastAPI Integration
+# mySwissTarget.ch – Premium Website mit Bestellformular
 
-Dieses Paket ist als **GitHub-/Coolify-taugliche Einbauhilfe** für eure bestehende SwissTarget-App gedacht.
+Diese Version enthält:
+- Verkaufswebseite für mySwissTarget.ch
+- Bestellformular unter `public/bestellung.html`
+- Admin-Demo unter `public/adminbereich.html`
+- Nginx / Dockerfile für Coolify
 
-Enthalten:
-- Stripe Billing Endpunkte für Karte / Rechnung
-- Webhook-Handler für Freischaltung
-- SQLAlchemy-Modelle für `customers`, `subscriptions`, `payments`
-- Alembic-Migration
-- `.env.example`
-- Hinweise für GitHub/Coolify
+## Coolify
+- Build Pack: Dockerfile
+- Base Directory: /
+- Dockerfile Location: /Dockerfile
+- Domain: https://myswisstarget.ch
+- Healthcheck: /health
 
-## Enthaltene Endpunkte
-- `POST /api/v1/billing/config`
-- `POST /api/v1/billing/checkout-session`
-- `POST /api/v1/billing/invoice-subscription`
-- `POST /api/v1/billing/customer-portal`
-- `POST /api/v1/billing/webhook`
+## Bestellformular
+Das Bestellformular ist frontend-seitig vollständig eingebaut und rechnet:
+- 1 Monat Probeabo
+- Basis CHF 25 / Monat
+- Basis + Pro CHF 35 / Monat
+- Rechnung, TWINT oder Karte
 
-## Stripe-Logik
-- Basis: CHF 25 / Monat
-- Pro: + CHF 10 / Monat
-- 30 Tage Trial
-- Karte für automatisches Abo
-- Rechnung per Stripe Billing / `send_invoice`
-- TWINT ist in Stripe grundsätzlich möglich, für automatische Monatsabos aber nicht die beste Standardmethode
+### Live-Anbindung
+Die Live-Endpunkte werden in `public/config.js` hinterlegt:
+- `orderApiUrl`
+- `invoiceApiUrl`
+- `checkoutApiUrl`
+- `twintCheckoutUrl`
+- `cardCheckoutUrl`
 
-## Einbau in eure App
-1. Dateien in eure bestehende App-Struktur kopieren.
-2. `.env.example` nach `.env` übernehmen und echte Werte setzen.
-3. `requirements-additions.txt` in eure Requirements übernehmen.
-4. Alembic Migration einspielen.
-5. `app/api/router_registration_example.py` in eurer `main.py` bzw. API-Registrierung übernehmen.
-6. In `provision_tenant_and_admin()` eure echte Vereins-/Mandantenlogik einbauen.
+### Erwartetes JSON an das Backend
+```json
+{
+  "plan": "basis" | "basis_pro",
+  "club_name": "...",
+  "contact_name": "...",
+  "email": "...",
+  "phone": "...",
+  "street": "...",
+  "zip_city": "...",
+  "payment_method": "invoice" | "twint" | "card",
+  "trial_months": "1",
+  "notes": "...",
+  "accept_trial": true,
+  "accept_terms": true,
+  "monthly_price_chf": 25 | 35
+}
+```
 
-## GitHub / Coolify
-Für Coolify braucht ihr zusätzlich:
-- `STRIPE_SECRET_KEY`
-- `STRIPE_PUBLISHABLE_KEY`
-- `STRIPE_WEBHOOK_SECRET`
-- `STRIPE_PRICE_BASIS`
-- `STRIPE_PRICE_PRO`
-- `APP_BASE_URL`
-- `APP_SUCCESS_URL`
-- `APP_CANCEL_URL`
-- `DATABASE_URL`
+### Erwartete Antwort
+Für Rechnung genügt z. B.:
+```json
+{
+  "message": "Bestellung erhalten. Probeabo aktiviert.",
+  "order_id": "SW-1001"
+}
+```
 
-## Wichtiger Hinweis
-Diese ZIP ist **ein Integrationspaket**, keine komplette neue App. Sie ist dafür gedacht, in euer bestehendes FastAPI-Projekt übernommen zu werden.
+Für TWINT oder Karte kann das Backend zusätzlich liefern:
+```json
+{
+  "checkout_url": "https://checkout.example.com/session/..."
+}
+```
+Dann leitet das Formular automatisch weiter.
+
+
+Logo-Assets:
+- public/assets/logo-nav.png
+- public/assets/logo-full-slogan.png
+- public/assets/logo-mark.png
+- public/assets/favicon.ico
