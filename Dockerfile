@@ -1,11 +1,191 @@
-FROM nginx:1.27-alpine
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwissTarget bestellen – Probeabo, Rechnung, TWINT oder Karte</title>
+  <meta name="description" content="Bestelle SwissTarget mit 1 Monat Probeabo. Für Anlass, Feldschiessen / OP und Verein intern. Zahlung per Rechnung, TWINT oder Karte.">
+  <meta name="theme-color" content="#cb3525">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header page-header-solid">
+    <nav class="navbar">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-wordmark.png" alt="mySwissTarget.ch"></a>
+      <div class="nav-links">
+        <a class="nav-pill" href="index.html#module">Module</a>
+        <a class="nav-pill" href="index.html#preise">Preise</a>
+        <a class="nav-pill" href="index.html#admin-abo">Admin &amp; Abo</a>
+        <a class="btn app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a>
+      </div>
+    </nav>
+  </header>
 
-COPY public/ /usr/share/nginx/html/
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+  <main>
+    <section class="page-hero order-hero">
+      <div class="container page-shell order-shell-hero">
+        <div>
+          <a class="back-link" href="index.html">← Zurück zur Startseite</a>
+          <span class="eyebrow">Bestellung &amp; Probeabo</span>
+          <h1>SwissTarget jetzt bestellen und 1 Monat kostenlos testen.</h1>
+          <p>
+            Wähle dein Paket, erfasse die Vereinsdaten und entscheide, ob du per <strong>Rechnung</strong>,
+            <strong>TWINT</strong> oder <strong>Karte</strong> bezahlen willst. Nach der Bestellung kann der Verein
+            direkt freigeschaltet werden – für Anlass, Feldschiessen / OP und Verein intern in einem System.
+          </p>
+          <div class="feature-pills">
+            <span class="pill">CHF 25 / Monat Basis</span>
+            <span class="pill">+ CHF 10 / Monat Pro</span>
+            <span class="pill">1 Monat Probeabo</span>
+          </div>
+        </div>
+        <div class="page-panel order-hero-panel">
+          <img src="assets/nature_team.jpg" alt="SwissTarget im Schweizer Schiesssport mit Natur und Teamarbeit">
+        </div>
+      </div>
+    </section>
 
-RUN test -f /usr/share/nginx/html/index.html \
- && nginx -t
+    <section class="section order-section">
+      <div class="container order-layout">
+        <section class="order-form-card">
+          <div class="section-headline">
+            <span class="eyebrow">Bestellformular</span>
+            <h2>Verein registrieren</h2>
+            <p class="lead">Das Formular ist auf den SwissTarget-Ablauf ausgerichtet: 1 Monat Probeabo, klare Paketwahl und vereinsfreundliche Zahlung per Rechnung, TWINT oder Karte.</p>
+          </div>
 
-EXPOSE 80
+          <form id="order-form" class="order-form" novalidate>
+            <input type="hidden" name="trial_months" value="1">
 
-CMD ["nginx", "-g", "daemon off;"]
+            <div class="form-section">
+              <h3>Paket</h3>
+              <div class="choice-grid">
+                <label class="choice-card active-choice">
+                  <input type="radio" name="plan" value="basis" checked>
+                  <strong>SwissTarget Verein</strong>
+                  <span>CHF 25 / Monat</span>
+                  <small>Anlass, Feldschiessen / OP und Verein intern</small>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="plan" value="basis_pro">
+                  <strong>SwissTarget Verein + Pro</strong>
+                  <span>CHF 35 / Monat</span>
+                  <small>inkl. SAT-Admin, SIUS, Jahresmeisterschaft und erweiterten Auswertungen</small>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Vereinsdaten</h3>
+              <div class="field-grid two-cols">
+                <label>
+                  <span>Vereinsname *</span>
+                  <input name="club_name" type="text" required autocomplete="organization">
+                </label>
+                <label>
+                  <span>Kontaktperson *</span>
+                  <input name="contact_name" type="text" required autocomplete="name">
+                </label>
+                <label>
+                  <span>E-Mail *</span>
+                  <input name="email" type="email" required autocomplete="email">
+                </label>
+                <label>
+                  <span>Telefon</span>
+                  <input name="phone" type="tel" autocomplete="tel">
+                </label>
+                <label>
+                  <span>Adresse *</span>
+                  <input name="street" type="text" required autocomplete="street-address">
+                </label>
+                <label>
+                  <span>PLZ / Ort *</span>
+                  <input name="zip_city" type="text" required autocomplete="postal-code">
+                </label>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Zahlungsart</h3>
+              <div class="choice-grid payment-grid">
+                <label class="choice-card active-choice payment-card">
+                  <input type="radio" name="payment_method" value="invoice" checked>
+                  <strong>Rechnung</strong>
+                  <span>Vereinsfreundlich</span>
+                  <small>Probeabo startet sofort, Rechnung folgt gemäss Bestellablauf für den Verein</small>
+                </label>
+                <label class="choice-card payment-card">
+                  <input type="radio" name="payment_method" value="twint">
+                  <strong>TWINT</strong>
+                  <span>Schneller Checkout</span>
+                  <small>Weiterleitung auf TWINT-Checkout nach Bestätigung</small>
+                </label>
+                <label class="choice-card payment-card">
+                  <input type="radio" name="payment_method" value="card">
+                  <strong>Karte</strong>
+                  <span>Visa / Mastercard</span>
+                  <small>Weiterleitung auf sicheren Karten-Checkout</small>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Bemerkungen</h3>
+              <label>
+                <span>Zusätzliche Angaben</span>
+                <textarea name="notes" rows="4" placeholder="z. B. gewünschter Start, Bemerkungen zu SAT-Admin / SIUS oder internen Vereinsprozessen"></textarea>
+              </label>
+            </div>
+
+            <div class="form-section checkboxes">
+              <label class="checkbox-row">
+                <input name="accept_trial" type="checkbox" required>
+                <span>Ich möchte das <strong>1-monatige Probeabo</strong> aktivieren und bestätige, dass danach das gewählte Paket kostenpflichtig weiterläuft, sofern nicht gekündigt wird.</span>
+              </label>
+              <label class="checkbox-row">
+                <input name="accept_terms" type="checkbox" required>
+                <span>Ich bestätige die Richtigkeit der Angaben und stimme der Verarbeitung der Daten zur Bearbeitung der Bestellung und der späteren Freischaltung zu.</span>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="submit" id="submit-order-btn">Jetzt bestellen</button>
+              <a class="secondary-btn" href="index.html#preise">Preise nochmals ansehen</a>
+            </div>
+            <p class="form-hint">Hinweis: Für TWINT und Karte wird im Live-Betrieb ein externer Checkout oder ein API-Endpoint benötigt. Rechnung kann direkt als Bestellanfrage für den Verein verarbeitet werden.</p>
+            <div id="order-message" class="order-message" aria-live="polite"></div>
+          </form>
+        </section>
+
+        <aside class="order-summary-card">
+          <div class="summary-box sticky-summary">
+            <span class="eyebrow">Zusammenfassung</span>
+            <h3>Deine Bestellung</h3>
+            <div class="summary-line"><span>Paket</span><strong id="summary-plan">SwissTarget Verein</strong></div>
+            <div class="summary-line"><span>Monatlicher Preis</span><strong id="summary-price">CHF 25</strong></div>
+            <div class="summary-line"><span>Probeabo</span><strong>1 Monat gratis</strong></div>
+            <div class="summary-line"><span>Zahlungsart</span><strong id="summary-payment">Rechnung</strong></div>
+            <div class="summary-total">
+              <span>Danach pro Monat</span>
+              <strong id="summary-total">CHF 25</strong>
+            </div>
+            <div class="summary-note">
+              <strong>Bestellablauf</strong>
+              <p>Verein anlegen → Probeabo starten → Zahlungsart verarbeiten → Freischaltung aktivieren → Login versenden.</p>
+            </div>
+            <div class="check-list compact-list compact-summary-list">
+              <div class="check-item"><span class="check-icon">✓</span><span>1 Verein, mehrere Benutzer</span></div>
+              <div class="check-item"><span class="check-icon">✓</span><span>Basis oder Basis + Pro</span></div>
+              <div class="check-item"><span class="check-icon">✓</span><span>Rechnung, TWINT oder Karte</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

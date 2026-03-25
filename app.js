@@ -53,10 +53,11 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 40;
+  padding-top: 8px;
 }
 .navbar {
   width: min(1260px, calc(100% - 24px));
-  margin: 6px auto 0;
+  margin: 0 auto 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,14 +73,16 @@ a { color: inherit; text-decoration: none; }
 .brand {
   display: inline-flex;
   align-items: center;
-  padding: 13px 22px;
+  padding: 10px 18px;
   border-radius: 999px;
   background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(250,247,242,0.95));
   box-shadow: 0 10px 24px rgba(20, 27, 39, 0.08);
-  font-size: 1.04rem;
-  font-weight: 900;
-  letter-spacing: -0.02em;
   white-space: nowrap;
+}
+.brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 .nav-links {
   display: flex;
@@ -121,13 +124,13 @@ a { color: inherit; text-decoration: none; }
 
 .hero {
   position: relative;
-  margin-top: -84px;
+  margin-top: 0;
   overflow: hidden;
 }
 .hero-media {
   height: clamp(620px, 70vw, 820px);
   min-height: 620px;
-  background: url('assets/hero.jpg') center 36% / cover no-repeat;
+  background: url('assets/hero_clean.jpg') center 40% / cover no-repeat;
   position: relative;
 }
 .hero-media::before {
@@ -146,12 +149,12 @@ a { color: inherit; text-decoration: none; }
 .hero-card {
   position: absolute;
   inset-inline: 0;
-  bottom: 22px;
+  bottom: 26px;
 }
 .hero-card-inner {
   position: relative;
   width: min(900px, calc(100% - 32px));
-  margin-left: clamp(16px, 8vw, 72px);
+  margin-left: clamp(16px, 7vw, 68px);
   padding: 36px 36px 30px;
   border-radius: 38px;
   background: linear-gradient(180deg, rgba(255,255,255,0.90), rgba(255,255,255,0.83));
@@ -265,7 +268,7 @@ a { color: inherit; text-decoration: none; }
 }
 .card-image {
   width: 100%;
-  height: 320px;
+  height: 340px;
   object-fit: cover;
   object-position: center 42%;
   background: #e9e6e1;
@@ -343,12 +346,14 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
 }
 .figure-clean img {
-  aspect-ratio: 16 / 10;
-  object-position: center 42%;
+  aspect-ratio: 16 / 11;
+  min-height: 420px;
+  object-position: center 45%;
 }
 .figure-wide img {
-  aspect-ratio: 16 / 9;
-  object-position: center 42%;
+  aspect-ratio: 16 / 10;
+  min-height: 420px;
+  object-position: center 45%;
 }
 .figure-card figcaption {
   padding: 14px 18px 18px;
@@ -486,6 +491,27 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
 }
 
+
+.site-footer {
+  padding: 8px 0 44px;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  text-align: center;
+}
+.footer-logo {
+  width: min(520px, 82vw);
+  height: auto;
+}
+.footer-inner p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
 @media (max-width: 1080px) {
   .stats-bar,
   .module-grid,
@@ -504,16 +530,17 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 820px) {
   .navbar {
     width: calc(100% - 20px);
-    margin-top: 10px;
+    margin: 0 auto 10px;
   }
   .hero {
-    margin-top: -104px;
+    margin-top: 0;
   }
   .hero-card-inner {
     width: calc(100% - 20px);
     margin: 0 auto;
     padding: 24px;
   }
+  .brand-logo { height: 34px; }
   .stats-bar,
   .module-grid,
   .pricing-grid,
@@ -593,6 +620,27 @@ body strong { color: var(--text); }
 .demo-table th, .demo-table td { padding:16px 18px; text-align:left; border-bottom:1px solid rgba(28,35,49,0.08); }
 .demo-table th { background:#faf7f2; font-size:.92rem; color:#5b6472; }
 .demo-table tr:last-child td { border-bottom:none; }
+
+.site-footer {
+  padding: 8px 0 44px;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  text-align: center;
+}
+.footer-logo {
+  width: min(520px, 82vw);
+  height: auto;
+}
+.footer-inner p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
 @media (max-width: 1080px) {
   .admin-cards, .faq-grid, .admin-demo-grid, .demo-stat-grid { grid-template-columns:1fr 1fr; }
 }
@@ -767,6 +815,27 @@ body strong { color: var(--text); }
 }
 .summary-note strong { display: block; margin-bottom: 8px; }
 .compact-summary-list { margin-top: 18px; }
+
+
+.site-footer {
+  padding: 8px 0 44px;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  text-align: center;
+}
+.footer-logo {
+  width: min(520px, 82vw);
+  height: auto;
+}
+.footer-inner p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
 
 @media (max-width: 1080px) {
   .order-layout,

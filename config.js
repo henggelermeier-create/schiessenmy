@@ -6,13 +6,13 @@
   <title>mySwissTarget.ch – Die Schweizer Plattform für Schiessverwaltung</title>
   <meta name="description" content="SwissTarget digitalisiert Anlass, Feldschiessen / Obligatorisches Schiessen und Verein intern – speziell für Schweizer Vereine, Schützenhäuser und Organisatoren.">
   <meta name="theme-color" content="#cb3525">
-  <link rel="icon" href="assets/cardPistole.jpg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar">
-      <a class="brand" href="#top">mySwissTarget.ch</a>
+      <a class="brand" href="#top"><img class="brand-logo" src="assets/logo-wordmark.png" alt="mySwissTarget.ch"></a>
       <div class="nav-links">
         <a class="nav-pill" href="#module">Module</a>
         <a class="nav-pill" href="#disziplinen">Disziplinen</a>
@@ -30,22 +30,22 @@
       <div class="hero-media"></div>
       <div class="hero-card">
         <div class="hero-card-inner">
-          <span class="eyebrow">3 Module. 1 Login. 1 Plattform.</span>
-          <h1>Die Schweizer Plattform für den digitalen Schiesssport-Alltag.</h1>
+          <span class="eyebrow">Für Schweizer Vereine, Schützenhäuser und Organisatoren</span>
+          <h1>SwissTarget digitalisiert den ganzen Schiesssport-Alltag.</h1>
           <p>
-            SwissTarget verbindet <strong>Anlass</strong>, <strong>Feldschiessen / Obligatorisches Schiessen</strong>
-            und <strong>Verein intern</strong> in einer einzigen Plattform – entwickelt für Schweizer Vereine,
-            Schützenhäuser, Schiessverwalter und Organisatoren, die heute klarer, schneller und moderner arbeiten wollen.
+            Von der <strong>Anlassverwaltung</strong> über <strong>Feldschiessen / Obligatorisches Schiessen</strong>
+            bis zu <strong>Verein intern</strong>: SwissTarget bündelt Resultate, Abrechnungen, Meisterschaften,
+            Mitglieder und Freischaltungen in einer modernen Plattform für den Schweizer Schiesssport.
           </p>
           <div class="actions">
-            <a class="btn" href="bestellung.html">Jetzt bestellen</a>
+            <a class="btn" href="bestellung.html">Probeabo starten</a>
             <a class="secondary-btn" href="#module">Module ansehen</a>
           </div>
           <div class="stats-bar">
-            <div class="stat-box"><strong>1 Login</strong><span>ein Zugang für Website, Bestellung und spätere App-Freischaltung</span></div>
+            <div class="stat-box"><strong>1 Login</strong><span>ein Zugang für Bestellung, spätere App und Kundenbereich</span></div>
             <div class="stat-box"><strong>3 Module</strong><span>Anlass, Feldschiessen / OP und Verein intern in einer Logik</span></div>
-            <div class="stat-box"><strong>6 Lizenzen</strong><span>G300, G50, G10, P50, P25 und P10 im selben System</span></div>
-            <div class="stat-box"><strong>Schweiz-Fokus</strong><span>für Vereine, Schützenhäuser, Feldschiessen und Vereinsbetrieb</span></div>
+            <div class="stat-box"><strong>6 Disziplin-Lizenzen</strong><span>G300, G50, G10, P50, P25 und P10 sauber im selben System</span></div>
+            <div class="stat-box"><strong>Für die Schweiz</strong><span>gebaut für Vereine, Schützenhäuser, Feldschiessen und den Vereinsalltag</span></div>
           </div>
         </div>
       </div>
@@ -57,18 +57,17 @@
           <span class="eyebrow">Die 3 Module im Zentrum</span>
           <h2>Die drei Bereiche, die eure App im Alltag wirklich stark machen</h2>
           <p class="lead max-copy">
-            SwissTarget ist nicht einfach ein weiteres Tool. Die Plattform deckt den ganzen digitalen
-            Schiesssport-Alltag ab – vom Anlass über Feldschiessen / OP bis zur internen Vereinsverwaltung.
+            SwissTarget ist die moderne Plattform für Vereine, Schiessverwalter und Organisatoren, die ihre Abläufe nicht mehr auf mehrere Programme verteilen wollen. Von der Anmeldung bis zur Meisterschaft bleibt alles in einem System.
           </p>
         </div>
 
         <div class="module-grid">
           <article class="module-card">
-            <img class="card-image tall-image" src="assets/sectionShooting.jpg" alt="Schütze mit Laptop und Resultatübersicht im Schützenhaus">
+            <img class="card-image tall-image" src="assets/module_anlass_clean.jpg" alt="Schütze mit Laptop und Resultatübersicht im Schützenhaus">
             <div class="card-body">
               <div class="module-label">Modul 1</div>
               <h3>Anlass</h3>
-              <p>Für Schiessanlässe von der Anmeldung bis zur Abrechnung – mit Resultaterfassung, Gruppen, Ranglisten, Berichten und klarer Auswertung in einem Ablauf.</p>
+              <p>Für Schiessanlässe vom ersten Eintrag bis zur fertigen Rangliste – mit Teilnehmern, Resultaten, Standblättern, Gruppen, Abrechnung und Berichten in einem sauberen Ablauf.</p>
               <div class="check-list compact-list">
                 <div class="check-item"><span class="check-icon">✓</span><span>Teilnehmer, Standblätter und Resultate</span></div>
                 <div class="check-item"><span class="check-icon">✓</span><span>Gruppen, Ranglisten, Statistiken und Berichte</span></div>
@@ -78,7 +77,7 @@
           </article>
 
           <article class="module-card">
-            <img class="card-image" src="assets/cardPistole.jpg" alt="Pistolenschütze im Schweizer Schiesssport">
+            <img class="card-image" src="assets/module_feld_clean.jpg" alt="Pistolenschütze im Schweizer Schiesssport">
             <div class="card-body">
               <div class="module-label">Modul 2</div>
               <h3>Feldschiessen /<br>Obligatorisches Schiessen</h3>
@@ -92,11 +91,11 @@
           </article>
 
           <article class="module-card">
-            <img class="card-image" src="assets/cardVerein.jpg" alt="Vereinsmitglieder mit Laptop und Resultatlisten">
+            <img class="card-image" src="assets/module_verein_clean.jpg" alt="Vereinsmitglieder mit Laptop und Resultatlisten">
             <div class="card-body">
               <div class="module-label">Modul 3</div>
               <h3>Verein intern</h3>
-              <p>Alles, was ein Verein intern braucht – Mitglieder, Meisterschaften, Abrechnungen, Statistiken und ein sauber geführter digitaler Vereinsalltag.</p>
+              <p>Alles, was Vereine intern wirklich brauchen – Mitglieder, interne Abrechnungen, Jahresmeisterschaften, Munitionsabrechnung, Statistiken und ein sauber geführter Vereinsalltag.</p>
               <div class="check-list compact-list">
                 <div class="check-item"><span class="check-icon">✓</span><span>Interne Abrechnungen und Munitionsabrechnung</span></div>
                 <div class="check-item"><span class="check-icon">✓</span><span>Jahresmeisterschaft und Vereinsmeisterschaft</span></div>
@@ -115,7 +114,7 @@
             <span class="eyebrow">Disziplinen im System</span>
             <h2>Für Standardgewehr, STGW 90 / 57-03, Pistole, Kleinkaliber, Luftgewehr und Luftpistole</h2>
             <p class="lead">
-              SwissTarget deckt die wichtigen Gewehr- und Pistolendisziplinen im Schweizer Schiesssport ab und bleibt dabei in einer einzigen Plattform logisch, schnell und übersichtlich.
+              SwissTarget deckt die relevanten Gewehr- und Pistolendisziplinen im Schweizer Schiesssport ab und verbindet sie mit Vereinslogik, Anlassverwaltung und einem professionellen Auftritt nach aussen.
             </p>
             <div class="discipline-grid">
               <div class="discipline-card"><strong>Standardgewehr</strong><span>300m Vereins- und Anlassbetrieb digital verwalten</span></div>
@@ -125,7 +124,7 @@
             </div>
           </div>
           <figure class="figure-card figure-clean">
-            <img src="assets/hero.jpg" alt="Sportschütze mit Gewehr in Schweizer Natur und Bergkulisse">
+            <img src="assets/team_nature_clean.jpg" alt="Mehrere Personen im Schweizer Schiesssport mit Natur im Hintergrund">
             <figcaption>Schweizer Natur, Schiesssport und eine Plattform, die für den echten Vereinsalltag gebaut wurde.</figcaption>
           </figure>
         </div>
@@ -136,13 +135,13 @@
       <div class="container">
         <div class="split-layout align-center">
           <figure class="figure-card figure-wide">
-            <img src="assets/sectionPlatform.jpg" alt="SwissTarget im Einsatz mit Resultatübersicht und Vereinsarbeit">
+            <img src="assets/section_platform_clean.jpg" alt="Schweizer Schiesssport mit Resultatübersicht und Vereinsarbeit">
           </figure>
           <div>
             <span class="eyebrow">Verkaufsstark und praxisnah</span>
             <h2>Nicht nur OP / Feldschiessen. Nicht nur Vereinsverwaltung.</h2>
             <p class="lead">
-              SwissTarget denkt breiter: eine durchgehende Plattform für den ganzen Schiesssport-Alltag. Weniger Tool-Chaos, weniger doppelte Erfassung und mehr Übersicht für Vereine, Organisatoren und Schützenhäuser.
+              SwissTarget denkt nicht nur in Einzelfunktionen, sondern in echten Abläufen. Weniger doppelte Erfassung, weniger Listen-Chaos und mehr Übersicht für Vereine, Organisatoren, Schützenhäuser und Support.
             </p>
             <div class="check-list">
               <div class="check-item"><span class="check-icon">✓</span><span>Ein Login für Bestellung, Freischaltung und die spätere SwissTarget-App</span></div>
@@ -160,7 +159,7 @@
           <span class="eyebrow">Warum SwissTarget?</span>
           <h2>Warum <span class="text-red">mySwissTarget.ch</span> statt anderer Schiesssoftware?</h2>
           <p class="lead max-copy">
-            Weil Vereine heute mehr brauchen als einzelne Funktionen. Sie brauchen eine Lösung, die modern aussieht, logisch funktioniert und Anlass, Feldschiessen / OP sowie Verein intern wirklich zusammenführt.
+            Weil Schweizer Vereine heute mehr brauchen als einzelne Funktionen. Sie brauchen eine Lösung, die modern aussieht, logisch funktioniert und Anlass, Feldschiessen / OP sowie Verein intern wirklich zusammenführt.
           </p>
         </div>
         <div class="compare-points">
@@ -238,7 +237,7 @@
             <span class="eyebrow">Adminbereich &amp; Bestelllogik</span>
             <h2>Ein sauberer Bestellablauf statt unnötig komplizierter Verwaltung</h2>
             <p class="lead">
-              Für SwissTarget ist kein unnötig grosser Adminbereich nötig. Entscheidend sind Kunden, Abos, Zahlungen, Freischaltungen und ein klarer Überblick für Support, Vereine und laufende Testphasen.
+              Für SwissTarget braucht es keinen überladenen Adminbereich. Entscheidend sind Kunden, Abos, Probeabos, Zahlungen, Freischaltungen und ein klarer Überblick für Support, Vereine und laufende Testphasen.
             </p>
             <div class="check-list">
               <div class="check-item"><span class="check-icon">✓</span><span><strong>Kunden &amp; Vereine:</strong> Kontaktperson, Verein, E-Mail, Adresse und Status</span></div>
@@ -257,7 +256,7 @@
             </div>
           </div>
           <figure class="figure-card figure-wide admin-visual">
-            <img src="assets/sectionPricing.jpg" alt="SwissTarget im Einsatz mit mehreren Personen und Laptop im Schützenhaus">
+            <img src="assets/section_pricing_clean.jpg" alt="Schweizer Schiesssport im Schützenhaus mit Laptop und Auswertung">
             <figcaption>Frontend-Demo für Kunden, Abos, Zahlungen und Freischaltungen.</figcaption>
           </figure>
         </div>
@@ -295,6 +294,14 @@
       </div>
     </section>
   </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img class="footer-logo" src="assets/logo-full.png" alt="mySwissTarget.ch Logo">
+      <p>mySwissTarget.ch – die Schweizer Plattform für Anlass, Feldschiessen / Obligatorisches Schiessen und Verein intern.</p>
+    </div>
+  </footer>
 
   <script src="config.js"></script>
   <script src="app.js"></script>
