@@ -1,3 +1,136 @@
 <!DOCTYPE html>
-<html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Kundenbereich – mySwissTarget.ch</title><link rel="icon" href="assets/favicon.ico"><link rel="stylesheet" href="styles.css"></head>
-<body><header class="site-header"><nav class="navbar"><a class="brand brand-logo" href="index.html"><img src="assets/logo-nav.png" alt="mySwissTarget.ch"></a><div class="nav-links"><a class="nav-pill" href="index.html#preise">Preise</a><a class="nav-pill" href="bestellung.html">Bestellen</a><a class="btn app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a></div></nav></header><main class="page-main"><section class="page-hero"><div class="container"><span class="eyebrow">Kundenbereich</span><h1>Verein, Abo und Rechnungen zentral verwalten</h1><p>Diese Demo zeigt, wie Vereine später ihr Paket, Rechnungen, Zahlungsart und Kontaktdaten selber verwalten können.</p></div></section><section class="section"><div class="container"><div class="module-grid"><article class="page-panel"><h3>Vereinsdaten</h3><p>Kontaktperson, Adresse, E-Mail und Telefonnummer jederzeit anpassen.</p></article><article class="page-panel"><h3>Abo & Paket</h3><p>Basis oder Basis + Pro sehen, Upgrades anfragen und Probeabo verfolgen.</p></article><article class="page-panel"><h3>Rechnungen</h3><p>Offene und bezahlte Rechnungen, Zahlungsarten und nächste Periode im Blick.</p></article></div></div></section></main></body></html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kundenbereich – mySwissTarget.ch</title>
+  <meta name="description" content="Demo für den Kundenbereich von mySwissTarget.ch mit Vereinsdaten, Abo, Rechnungen und Zahlungsarten.">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header page-header-solid">
+    <nav class="navbar">
+      <a class="brand brand-logo" href="index.html"><img src="assets/logo-nav.png" alt="mySwissTarget.ch"></a>
+      <div class="nav-links">
+        <a class="nav-pill" href="index.html#preise">Preise</a>
+        <a class="nav-pill" href="bestellung.html">Bestellen</a>
+        <a class="btn app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="container">
+        <a class="back-link" href="index.html">← Zurück zur Startseite</a>
+        <div class="section-headline">
+          <span class="eyebrow">Kundenbereich Demo</span>
+          <h1>Vereinsdaten, Abo und Rechnungen zentral verwalten.</h1>
+          <p class="lead max-copy">So kann der Kundenbereich für SwissTarget aussehen: klar, mobil nutzbar und auf Vereine ausgerichtet, die ihre Stammdaten, ihr Paket und ihre Rechnungen selbst im Blick behalten wollen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container customer-grid">
+        <div class="demo-panel form-card">
+          <div class="panel-title-row">
+            <h2>Vereinsdaten bearbeiten</h2>
+            <span class="status-pill active">aktiv</span>
+          </div>
+          <form class="kunden-form">
+            <div class="two-cols">
+              <label><span>Verein</span><input type="text" value="SG Musterfeld"></label>
+              <label><span>Kontaktperson</span><input type="text" value="Max Muster"></label>
+            </div>
+            <div class="two-cols">
+              <label><span>E-Mail</span><input type="email" value="info@sg-musterfeld.ch"></label>
+              <label><span>Telefon</span><input type="text" value="+41 79 123 45 67"></label>
+            </div>
+            <div class="two-cols">
+              <label><span>Strasse</span><input type="text" value="Dorfstrasse 10"></label>
+              <label><span>PLZ / Ort</span><input type="text" value="9100 Herisau"></label>
+            </div>
+            <label><span>Bemerkungen</span><textarea rows="4">Bitte Freischaltung für zwei weitere Vereinsadmins vorbereiten.</textarea></label>
+            <div class="actions">
+              <a class="btn" href="#">Änderungen speichern</a>
+              <a class="secondary-btn" href="#">Kontaktperson wechseln</a>
+            </div>
+            <div class="small-note">Demo-Ansicht: In der Live-Version werden Änderungen direkt in der Datenbank gespeichert.</div>
+          </form>
+        </div>
+
+        <div class="demo-panel">
+          <div class="panel-title-row">
+            <h2>Abo & Paket</h2>
+            <span class="status-pill trial">Probeabo</span>
+          </div>
+          <div class="check-list compact-list">
+            <div class="check-item"><span class="check-icon">✓</span><span><strong>Paket:</strong> Basis + Pro</span></div>
+            <div class="check-item"><span class="check-icon">✓</span><span><strong>Preis:</strong> CHF 35 / Monat nach Probeabo</span></div>
+            <div class="check-item"><span class="check-icon">✓</span><span><strong>Nächster Termin:</strong> 23.04.2026</span></div>
+            <div class="check-item"><span class="check-icon">✓</span><span><strong>Zahlungsart:</strong> Rechnung</span></div>
+          </div>
+          <div class="actions">
+            <a class="secondary-btn" href="#">Auf Karte wechseln</a>
+            <a class="secondary-btn" href="#">Pro-Paket anpassen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-grid">
+        <div class="demo-panel">
+          <div class="panel-title-row">
+            <h2>Rechnungen</h2>
+            <a class="secondary-btn" href="#">Alle anzeigen</a>
+          </div>
+          <div class="invoice-list">
+            <div class="invoice-item">
+              <div class="invoice-meta"><strong>Rechnung März 2026</strong><span>Basis + Pro · offen · fällig 31.03.2026</span></div>
+              <div class="invoice-action"><strong>CHF 35</strong><div class="small-note">Rechnung</div></div>
+            </div>
+            <div class="invoice-item">
+              <div class="invoice-meta"><strong>Rechnung Februar 2026</strong><span>bezahlt am 28.02.2026</span></div>
+              <div class="invoice-action"><strong>CHF 35</strong><div class="small-note">bezahlt</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-panel">
+          <div class="panel-title-row">
+            <h2>Was Vereine hier später können</h2>
+          </div>
+          <ul class="clean-list">
+            <li>Stammdaten selber anpassen</li>
+            <li>Abo und Paket sehen</li>
+            <li>Rechnungen herunterladen</li>
+            <li>Zahlungsart auf Rechnung, Karte oder TWINT umstellen</li>
+            <li>Zusätzliche Admins anfragen</li>
+            <li>Probeabo, aktiv, offen oder pausiert nachvollziehen</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-last">
+      <div class="container">
+        <div class="cta-banner">
+          <span class="eyebrow">Kundenbereich</span>
+          <h2>Vereine sehen ihr Paket, ihre Daten und ihre Rechnungen auf einen Blick.</h2>
+          <p>Diese Demo zeigt den Aufbau. In der Live-Version wird dieser Bereich direkt mit SwissTarget, Stripe und eurer Lizenzlogik verbunden.</p>
+          <div class="actions center-actions">
+            <a class="btn" href="bestellung.html">Jetzt bestellen</a>
+            <a class="secondary-btn" href="adminbereich.html">Adminbereich ansehen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
