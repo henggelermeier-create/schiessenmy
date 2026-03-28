@@ -3,132 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adminbereich Demo – mySwissTarget.ch</title>
-  <meta name="description" content="Demo für Kunden, Abos, Zahlungen und Freischaltungen in SwissTarget – passend zum Bestellablauf der Plattform.">
+  <title>Adminbereich – Website CMS Demo | mySwissTarget.ch</title>
+  <meta name="description" content="Admin-Demo für Website-Inhalte, Bestellungen, Abos und Freischaltungen in mySwissTarget.ch.">
+  <meta name="theme-color" content="#cb3525">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="admin">
   <header class="site-header page-header-solid">
-    <nav class="navbar">
-      <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-wordmark.png" alt="mySwissTarget.ch"></a>
+    <nav class="navbar container-wide">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-full.png" alt="mySwissTarget.ch"></a>
       <div class="nav-links">
-        <a class="nav-pill" href="index.html#module">Module</a>
-        <a class="nav-pill" href="index.html#preise">Preise</a>
-        <a class="btn app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a>
+        <a class="nav-link" href="index.html">Startseite</a>
+        <a class="nav-link" href="kundenbereich.html">Kundenbereich</a>
+        <a class="nav-link" href="bestellung.html">Bestellen</a>
+        <a class="btn btn-nav app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="page-hero section">
-      <div class="container">
-        <a class="back-link" href="index.html">← Zurück zur Startseite</a>
-        <div class="section-headline">
-          <span class="eyebrow">Adminbereich Demo</span>
-          <h1>Kunden, Abos, Zahlungen und Freischaltungen in einem klaren Bereich.</h1>
-          <p class="lead max-copy">Diese Seite zeigt, wie der Adminbereich für SwissTarget aufgebaut sein kann: einfach, verständlich und auf Vereine, Probeabos, Rechnungen und Supportfälle im Alltag zugeschnitten.</p>
+    <section class="page-hero admin-page-hero">
+      <div class="container page-shell admin-shell-hero">
+        <div>
+          <a class="back-link" href="index.html">← Zurück zur Startseite</a>
+          <span class="eyebrow">Adminbereich</span>
+          <h1>Webseite, Inhalte, Bestelllogik und Darstellung an einem Ort pflegen.</h1>
+          <p class="lead">Diese Admin-Demo erweitert die Verkaufsseite um ein einfaches Website-CMS. Änderungen werden im Browser gespeichert, können exportiert und später in ein echtes Backend übernommen werden.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container admin-demo-grid">
-        <div class="demo-panel big-panel">
-          <div class="panel-title-row">
-            <h2>Übersicht</h2>
-            <span class="status-pill active">12 aktiv</span>
-          </div>
-          <div class="demo-stat-grid">
-            <div class="demo-stat"><strong>28</strong><span>Vereine</span></div>
-            <div class="demo-stat"><strong>7</strong><span>Probeabo</span></div>
-            <div class="demo-stat"><strong>5</strong><span>Rechnung offen</span></div>
-            <div class="demo-stat"><strong>CHF 3’240</strong><span>Monatsumsatz</span></div>
-          </div>
-        </div>
-        <div class="demo-panel">
-          <h3>Bestellablauf</h3>
-          <ul class="clean-list">
-            <li>Paket wählen: Basis oder Basis + Pro</li>
-            <li>Vereinsdaten erfassen</li>
-            <li>Rechnung, TWINT oder Karte wählen</li>
-            <li>1 Monat Probeabo startet sofort</li>
-            <li>Nach Zahlung oder Testphase bleibt das System aktiv</li>
-          </ul>
-        </div>
-        <div class="demo-panel">
-          <h3>Statuslogik</h3>
-          <div class="status-list">
-            <span class="status-pill trial">trial</span>
-            <span class="status-pill pending">pending_payment</span>
-            <span class="status-pill active">active</span>
-            <span class="status-pill paused">suspended</span>
-            <span class="status-pill cancelled">cancelled</span>
+        <div class="page-panel admin-hero-panel">
+          <div class="demo-stat-grid two-cols">
+            <div class="demo-stat"><strong>Website CMS</strong><span>Hero, Module, Preise, FAQ und Footer</span></div>
+            <div class="demo-stat"><strong>Bestelllogik</strong><span>Probeabo, Zahlung, Status und Freischaltung</span></div>
+            <div class="demo-stat"><strong>Kundenbereich</strong><span>Bestellungen und Zahlstatus</span></div>
+            <div class="demo-stat"><strong>Export / Import</strong><span>JSON sichern und wieder laden</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container admin-table-shell">
-        <div class="panel-title-row">
-          <h2>Kunden &amp; Abos</h2>
-          <a class="secondary-btn" href="index.html#admin-abo">Zur Beschreibung</a>
-        </div>
-        <div class="table-wrap">
-          <table class="demo-table">
-            <thead>
-              <tr>
-                <th>Verein</th>
-                <th>Paket</th>
-                <th>Zahlung</th>
-                <th>Status</th>
-                <th>Freigabe</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>SG Musterfeld</td>
-                <td>Basis + Pro</td>
-                <td>TWINT</td>
-                <td><span class="status-pill active">active</span></td>
-                <td>Sofort</td>
-              </tr>
-              <tr>
-                <td>FSV Alpenblick</td>
-                <td>Basis</td>
-                <td>Rechnung</td>
-                <td><span class="status-pill trial">trial</span></td>
-                <td>30 Tage Probeabo</td>
-              </tr>
-              <tr>
-                <td>PS Bergtal</td>
-                <td>Basis + Pro</td>
-                <td>Karte</td>
-                <td><span class="status-pill active">active</span></td>
-                <td>Sofort</td>
-              </tr>
-              <tr>
-                <td>SG Talboden</td>
-                <td>Basis</td>
-                <td>Rechnung</td>
-                <td><span class="status-pill pending">offen</span></td>
-                <td>Support-Override möglich</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-last">
-      <div class="container">
-        <div class="cta-banner">
-          <span class="eyebrow">SwissTarget Admin</span>
-          <h2>Sauberer Überblick statt unnötig komplizierter Administration.</h2>
-          <p>Diese Demo zeigt den Aufbau. Die echte Backend-Anbindung für Kunden, Abos, Zahlungen und Freischaltung kann später direkt mit der SwissTarget-App verbunden werden.</p>
-          <div class="actions center-actions">
-            <a class="btn app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a>
+    <section class="section admin-cms-section">
+      <div class="container-wide admin-cms-layout">
+        <aside class="cms-sidebar">
+          <div class="cms-nav-group">
+            <button class="cms-nav-btn active" data-tab="hero">Hero & Navigation</button>
+            <button class="cms-nav-btn" data-tab="modules">Module</button>
+            <button class="cms-nav-btn" data-tab="why">Warum SwissTarget</button>
+            <button class="cms-nav-btn" data-tab="disciplines">Disziplinen</button>
+            <button class="cms-nav-btn" data-tab="prices">Preise & Bestellen</button>
+            <button class="cms-nav-btn" data-tab="faq">FAQ</button>
+            <button class="cms-nav-btn" data-tab="contact">Kontakt & Footer</button>
           </div>
+          <div class="cms-sidebar-card">
+            <strong>Aktionen</strong>
+            <button class="secondary-btn" id="cms-save" type="button">Änderungen speichern</button>
+            <button class="secondary-btn" id="cms-export" type="button">JSON exportieren</button>
+            <label class="secondary-btn file-btn">
+              JSON importieren
+              <input id="cms-import" type="file" accept="application/json" hidden>
+            </label>
+            <button class="secondary-btn danger-btn" id="cms-reset" type="button">Auf Standard zurücksetzen</button>
+            <a class="btn btn-light" href="index.html" target="_blank" rel="noopener noreferrer">Startseite prüfen</a>
+          </div>
+        </aside>
+
+        <div class="cms-panels">
+          <form id="cms-form" class="cms-form">
+            <section class="cms-panel active" data-panel="hero">
+              <div class="panel-title-row"><h2>Hero & Navigation</h2><span class="status-pill active">sichtbar</span></div>
+              <div class="field-grid two-cols admin-fields">
+                <label><span>Hero Badge</span><input name="hero.eyebrow" type="text"></label>
+                <label><span>Hero Bildpfad</span><input name="media.hero" type="text"></label>
+                <label class="full"><span>Hero Titel</span><textarea name="hero.title" rows="3"></textarea></label>
+                <label class="full"><span>Hero Text</span><textarea name="hero.lead" rows="4"></textarea></label>
+                <label><span>Primärer Button</span><input name="hero.primaryLabel" type="text"></label>
+                <label><span>Sekundärer Button</span><input name="hero.secondaryLabel" type="text"></label>
+                <label><span>Navigation: Module</span><input name="nav.modules" type="text"></label>
+                <label><span>Navigation: Disziplinen</span><input name="nav.disciplines" type="text"></label>
+                <label><span>Navigation: Warum</span><input name="nav.why" type="text"></label>
+                <label><span>Navigation: Preise</span><input name="nav.prices" type="text"></label>
+                <label><span>Navigation: Bestellen</span><input name="nav.order" type="text"></label>
+                <label><span>Navigation: FAQ</span><input name="nav.faq" type="text"></label>
+              </div>
+            </section>
+
+            <section class="cms-panel" data-panel="modules">
+              <div class="panel-title-row"><h2>Module</h2><span class="status-pill active">3 Bereiche</span></div>
+              <label><span>Bereichstitel</span><input name="modulesSection.title" type="text"></label>
+              <label><span>Bereichstext</span><textarea name="modulesSection.lead" rows="3"></textarea></label>
+              <div id="cms-modules-repeater" class="cms-repeater"></div>
+            </section>
+
+            <section class="cms-panel" data-panel="why">
+              <div class="panel-title-row"><h2>Warum SwissTarget</h2><span class="status-pill active">Vergleich</span></div>
+              <div class="field-grid two-cols admin-fields">
+                <label><span>Badge</span><input name="why.eyebrow" type="text"></label>
+                <label><span>Bildpfad</span><input name="media.why" type="text"></label>
+                <label class="full"><span>Titel</span><textarea name="why.title" rows="3"></textarea></label>
+                <label class="full"><span>Text</span><textarea name="why.lead" rows="4"></textarea></label>
+              </div>
+              <div id="cms-compare-repeater" class="cms-repeater"></div>
+            </section>
+
+            <section class="cms-panel" data-panel="disciplines">
+              <div class="panel-title-row"><h2>Disziplinen</h2><span class="status-pill active">Lizenzen</span></div>
+              <label><span>Titel</span><input name="disciplines.title" type="text"></label>
+              <label><span>Text</span><textarea name="disciplines.lead" rows="3"></textarea></label>
+              <label><span>Disziplinen (eine Zeile = CODE | Beschreibung)</span><textarea name="disciplines.items" rows="8"></textarea></label>
+            </section>
+
+            <section class="cms-panel" data-panel="prices">
+              <div class="panel-title-row"><h2>Preise & Bestellen</h2><span class="status-pill trial">Probeabo</span></div>
+              <label><span>Preistitel</span><input name="prices.title" type="text"></label>
+              <label><span>Preistext</span><textarea name="prices.lead" rows="3"></textarea></label>
+              <div id="cms-prices-repeater" class="cms-repeater"></div>
+              <hr>
+              <label><span>Bestellblock Titel</span><input name="orderBlock.title" type="text"></label>
+              <label><span>Bestellblock Text</span><textarea name="orderBlock.lead" rows="3"></textarea></label>
+              <label><span>Bestellschritte (eine Zeile pro Schritt)</span><textarea name="orderBlock.steps" rows="5"></textarea></label>
+            </section>
+
+            <section class="cms-panel" data-panel="faq">
+              <div class="panel-title-row"><h2>FAQ & Footer</h2><span class="status-pill active">Live</span></div>
+              <label><span>FAQ Titel</span><input name="faq.title" type="text"></label>
+              <div id="cms-faq-repeater" class="cms-repeater"></div>
+              <hr>
+              <label><span>Footer Text</span><textarea name="footer.tagline" rows="3"></textarea></label>
+              
+            </section>
+
+            <section class="cms-panel" data-panel="contact">
+              <div class="panel-title-row"><h2>Kontakt & Footer</h2><span class="status-pill active">Live</span></div>
+              <div class="field-grid two-cols admin-fields">
+                <label><span>Kontakt Badge</span><input name="contact.eyebrow" type="text"></label>
+                
+                <label class="full"><span>Kontakt Titel</span><textarea name="contact.title" rows="3"></textarea></label>
+                <label class="full"><span>Kontakt Text</span><textarea name="contact.lead" rows="4"></textarea></label>
+                <label><span>Primärer Button</span><input name="contact.primaryLabel" type="text"></label>
+                <label><span>Sekundärer Button</span><input name="contact.secondaryLabel" type="text"></label>
+                <label><span>Box 1 Titel</span><input name="contact.boxes.0.title" type="text"></label>
+                <label><span>Box 1 Text</span><textarea name="contact.boxes.0.text" rows="3"></textarea></label>
+                <label><span>Box 2 Titel</span><input name="contact.boxes.1.title" type="text"></label>
+                <label><span>Box 2 Text</span><textarea name="contact.boxes.1.text" rows="3"></textarea></label>
+                <label><span>Box 3 Titel</span><input name="contact.boxes.2.title" type="text"></label>
+                <label><span>Box 3 Text</span><textarea name="contact.boxes.2.text" rows="3"></textarea></label>
+                <label class="full"><span>Footer Text</span><textarea name="footer.tagline" rows="3"></textarea></label>
+              </div>
+            </section>
+          </form>
         </div>
       </div>
     </section>

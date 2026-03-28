@@ -9,15 +9,16 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="order">
   <header class="site-header page-header-solid">
-    <nav class="navbar">
-      <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-wordmark.png" alt="mySwissTarget.ch"></a>
+    <nav class="navbar container-wide">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-full.png" alt="mySwissTarget.ch"></a>
       <div class="nav-links">
-        <a class="nav-pill" href="index.html#module">Module</a>
-        <a class="nav-pill" href="index.html#preise">Preise</a>
-        <a class="nav-pill" href="index.html#admin-abo">Admin &amp; Abo</a>
-        <a class="btn app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a>
+        <a class="nav-link" href="index.html#module">Module</a>
+        <a class="nav-link" href="index.html#preise">Preise</a>
+        <a class="nav-link" href="kundenbereich.html">Kundenbereich</a>
+        <a class="nav-link" href="adminbereich.html">Adminbereich</a>
+        <a class="btn btn-nav app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a>
       </div>
     </nav>
   </header>
@@ -27,13 +28,9 @@
       <div class="container page-shell order-shell-hero">
         <div>
           <a class="back-link" href="index.html">← Zurück zur Startseite</a>
-          <span class="eyebrow">Bestellung &amp; Probeabo</span>
-          <h1>SwissTarget jetzt bestellen und 1 Monat kostenlos testen.</h1>
-          <p>
-            Wähle dein Paket, erfasse die Vereinsdaten und entscheide, ob du per <strong>Rechnung</strong>,
-            <strong>TWINT</strong> oder <strong>Karte</strong> bezahlen willst. Nach der Bestellung kann der Verein
-            direkt freigeschaltet werden – für Anlass, Feldschiessen / OP und Verein intern in einem System.
-          </p>
+          <span class="eyebrow" id="order-page-eyebrow">Bestellung &amp; Probeabo</span>
+          <h1 id="order-page-title">SwissTarget jetzt bestellen und 1 Monat kostenlos testen.</h1>
+          <p id="order-page-lead">Wähle dein Paket, erfasse die Vereinsdaten und entscheide, ob du per <strong>Rechnung</strong>, <strong>TWINT</strong> oder <strong>Karte</strong> bezahlen willst. Nach der Bestellung kann der Verein direkt freigeschaltet werden – für Anlass, Feldschiessen / OP und Verein intern in einem System.</p>
           <div class="feature-pills">
             <span class="pill">CHF 25 / Monat Basis</span>
             <span class="pill">+ CHF 10 / Monat Pro</span>
@@ -41,7 +38,7 @@
           </div>
         </div>
         <div class="page-panel order-hero-panel">
-          <img src="assets/nature_team.jpg" alt="SwissTarget im Schweizer Schiesssport mit Natur und Teamarbeit">
+          <img src="assets/team_nature_clean.jpg" alt="SwissTarget im Schweizer Schiesssport mit Natur und Teamarbeit">
         </div>
       </div>
     </section>
@@ -79,30 +76,12 @@
             <div class="form-section">
               <h3>Vereinsdaten</h3>
               <div class="field-grid two-cols">
-                <label>
-                  <span>Vereinsname *</span>
-                  <input name="club_name" type="text" required autocomplete="organization">
-                </label>
-                <label>
-                  <span>Kontaktperson *</span>
-                  <input name="contact_name" type="text" required autocomplete="name">
-                </label>
-                <label>
-                  <span>E-Mail *</span>
-                  <input name="email" type="email" required autocomplete="email">
-                </label>
-                <label>
-                  <span>Telefon</span>
-                  <input name="phone" type="tel" autocomplete="tel">
-                </label>
-                <label>
-                  <span>Adresse *</span>
-                  <input name="street" type="text" required autocomplete="street-address">
-                </label>
-                <label>
-                  <span>PLZ / Ort *</span>
-                  <input name="zip_city" type="text" required autocomplete="postal-code">
-                </label>
+                <label><span>Vereinsname *</span><input name="club_name" type="text" required autocomplete="organization"></label>
+                <label><span>Kontaktperson *</span><input name="contact_name" type="text" required autocomplete="name"></label>
+                <label><span>E-Mail *</span><input name="email" type="email" required autocomplete="email"></label>
+                <label><span>Telefon</span><input name="phone" type="tel" autocomplete="tel"></label>
+                <label><span>Adresse *</span><input name="street" type="text" required autocomplete="street-address"></label>
+                <label><span>PLZ / Ort *</span><input name="zip_city" type="text" required autocomplete="postal-code"></label>
               </div>
             </div>
 
@@ -166,10 +145,7 @@
             <div class="summary-line"><span>Monatlicher Preis</span><strong id="summary-price">CHF 25</strong></div>
             <div class="summary-line"><span>Probeabo</span><strong>1 Monat gratis</strong></div>
             <div class="summary-line"><span>Zahlungsart</span><strong id="summary-payment">Rechnung</strong></div>
-            <div class="summary-total">
-              <span>Danach pro Monat</span>
-              <strong id="summary-total">CHF 25</strong>
-            </div>
+            <div class="summary-total"><span>Danach pro Monat</span><strong id="summary-total">CHF 25</strong></div>
             <div class="summary-note">
               <strong>Bestellablauf</strong>
               <p>Verein anlegen → Probeabo starten → Zahlungsart verarbeiten → Freischaltung aktivieren → Login versenden.</p>

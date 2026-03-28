@@ -1,10 +1,12 @@
-# mySwissTarget.ch – Premium Website mit Bestellformular
+# mySwissTarget.ch – Verkaufswebseite mit Admin-CMS-Demo
 
 Diese Version enthält:
-- Verkaufswebseite für mySwissTarget.ch
-- Bestellformular unter `public/bestellung.html`
-- Admin-Demo unter `public/adminbereich.html`
-- Nginx / Dockerfile für Coolify
+- Verkaufswebseite im bisherigen Premium-Stil
+- Bestellformular mit Probeabo / Rechnung / TWINT / Karte
+- Kundenbereich-Demo unter `public/kundenbereich.html`
+- Admin-CMS-Demo unter `public/adminbereich.html`
+- Bearbeitung von Hero, Modulen, Vergleich, Disziplinen, Preisen, FAQ und Footer direkt im Browser
+- Export / Import der Website-Inhalte als JSON
 
 ## Coolify
 - Build Pack: Dockerfile
@@ -13,53 +15,14 @@ Diese Version enthält:
 - Domain: https://myswisstarget.ch
 - Healthcheck: /health
 
-## Bestellformular
-Das Bestellformular ist frontend-seitig vollständig eingebaut und rechnet:
-- 1 Monat Probeabo
-- Basis CHF 25 / Monat
-- Basis + Pro CHF 35 / Monat
-- Rechnung, TWINT oder Karte
+## Hinweis zur Admin-Demo
+Die Änderungen aus dem Adminbereich werden browserseitig in `localStorage` gespeichert.
+Für den Live-Betrieb kann diese Struktur später direkt an ein echtes Backend angebunden werden.
 
-### Live-Anbindung
+## Live-Anbindung Bestellformular
 Die Live-Endpunkte werden in `public/config.js` hinterlegt:
 - `orderApiUrl`
 - `invoiceApiUrl`
 - `checkoutApiUrl`
 - `twintCheckoutUrl`
 - `cardCheckoutUrl`
-
-### Erwartetes JSON an das Backend
-```json
-{
-  "plan": "basis" | "basis_pro",
-  "club_name": "...",
-  "contact_name": "...",
-  "email": "...",
-  "phone": "...",
-  "street": "...",
-  "zip_city": "...",
-  "payment_method": "invoice" | "twint" | "card",
-  "trial_months": "1",
-  "notes": "...",
-  "accept_trial": true,
-  "accept_terms": true,
-  "monthly_price_chf": 25 | 35
-}
-```
-
-### Erwartete Antwort
-Für Rechnung genügt z. B.:
-```json
-{
-  "message": "Bestellung erhalten. Probeabo aktiviert.",
-  "order_id": "SW-1001"
-}
-```
-
-Für TWINT oder Karte kann das Backend zusätzlich liefern:
-```json
-{
-  "checkout_url": "https://checkout.example.com/session/..."
-}
-```
-Dann leitet das Formular automatisch weiter.

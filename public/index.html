@@ -9,19 +9,19 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="homepage">
   <header class="site-header">
     <nav class="navbar container-wide">
-      <a class="brand" href="#top">
+      <a class="brand" href="#top" aria-label="mySwissTarget.ch Startseite">
         <img class="brand-logo" src="assets/logo-full.png" alt="mySwissTarget.ch">
       </a>
       <div class="nav-links">
-        <a class="nav-link" href="#module">Module</a>
-        <a class="nav-link" href="#disziplinen">Disziplinen</a>
-        <a class="nav-link" href="#vergleich">Warum SwissTarget?</a>
-        <a class="nav-link" href="#preise">Preise</a>
-        <a class="nav-link" href="#admin-abo">Bestellen &amp; Abo</a>
-        <a class="nav-link nav-link-accent" href="bestellung.html">Bestellen</a>
+        <a class="nav-link" id="nav-modules" href="#module">Module</a>
+        <a class="nav-link" id="nav-disciplines" href="#disziplinen">Disziplinen</a>
+        <a class="nav-link" id="nav-why" href="#vergleich">Warum SwissTarget?</a>
+        <a class="nav-link" id="nav-prices" href="#preise">Preise</a>
+        <a class="nav-link nav-link-accent" id="nav-order" href="bestellung.html">Bestellen</a>
+        <a class="nav-link" id="nav-faq" href="#faq">FAQ</a>
         <a class="btn btn-nav app-link" href="https://app.myswisstarget.ch" target="_blank" rel="noopener noreferrer">Zur App</a>
       </div>
     </nav>
@@ -29,26 +29,17 @@
 
   <main id="top">
     <section class="hero-section">
-      <div class="hero-media"></div>
+      <div class="hero-media" id="hero-media"></div>
       <div class="hero-overlay container-wide">
         <div class="hero-copy">
-          <span class="eyebrow">Die Plattform für den Schweizer Schiesssport</span>
-          <h1>Die moderne Schweizer Plattform für Schiessverwaltung.</h1>
-          <p>
-            mySwissTarget.ch verbindet <strong>Anlass</strong>, <strong>Feldschiessen / Obligatorisches Schiessen</strong>
-            und <strong>Verein intern</strong> in einem System – für Vereine, Schiessverwalter,
-            Organisatoren und den digitalen Alltag im Schweizer Schiesssport.
-          </p>
+          <span class="eyebrow" id="hero-eyebrow">Die Plattform für den Schweizer Schiesssport</span>
+          <h1 id="hero-title">Die moderne Schweizer Plattform für Schiessverwaltung.</h1>
+          <p id="hero-lead">mySwissTarget.ch verbindet <strong>Anlass</strong>, <strong>Feldschiessen / Obligatorisches Schiessen</strong> und <strong>Verein intern</strong> in einem System – für Vereine, Schiessverwalter, Organisatoren und den digitalen Alltag im Schweizer Schiesssport.</p>
           <div class="hero-actions">
-            <a class="btn" href="bestellung.html">Probeabo starten</a>
-            <a class="btn btn-light" href="#module">Module ansehen</a>
+            <a class="btn" id="hero-primary" href="bestellung.html">Probeabo starten</a>
+            <a class="btn btn-light" id="hero-secondary" href="#module">Module ansehen</a>
           </div>
-          <div class="hero-stats">
-            <div class="hero-stat"><strong>1 Login</strong><span>für Bestellung, Kundenbereich und App</span></div>
-            <div class="hero-stat"><strong>3 Module</strong><span>Anlass, Feldschiessen / OP, Verein intern</span></div>
-            <div class="hero-stat"><strong>6 Lizenzen</strong><span>G300, G50, G10, P50, P25, P10</span></div>
-            <div class="hero-stat"><strong>Schweiz-Fokus</strong><span>für Vereine, Schützenhäuser und Organisatoren</span></div>
-          </div>
+          <div class="hero-stats" id="hero-stats"></div>
         </div>
       </div>
     </section>
@@ -56,56 +47,11 @@
     <section class="section section-tight" id="module">
       <div class="container-wide">
         <div class="section-headline center-text">
-          <span class="eyebrow">Die 3 Module im Zentrum</span>
-          <h2>Genau die drei Bereiche, die eure App im Alltag stark machen</h2>
-          <p class="lead max-copy">
-            Keine Einzellösung für nur einen Teilbereich. mySwissTarget.ch bündelt den Schiesssport-Alltag in einer Plattform – von der Anmeldung bis zur Meisterschaft, von Feldschiessen und OP bis zu internen Abrechnungen und Mitgliederverwaltung.
-          </p>
+          <span class="eyebrow" id="modules-eyebrow">Die 3 Module im Zentrum</span>
+          <h2 id="modules-title">Genau die drei Bereiche, die eure App im Alltag stark machen</h2>
+          <p class="lead max-copy" id="modules-lead">Keine Einzellösung für nur einen Teilbereich. mySwissTarget.ch bündelt den Schiesssport-Alltag in einer Plattform – von der Anmeldung bis zur Meisterschaft, von Feldschiessen und OP bis zu internen Abrechnungen und Mitgliederverwaltung.</p>
         </div>
-
-        <div class="module-grid module-grid-showcase">
-          <article class="module-card showcase-card">
-            <div class="card-body">
-              <div class="module-label">Modul 1</div>
-              <h3>Anlass</h3>
-              <p>Für Schiessanlässe von der Anmeldung bis zur Abrechnung – mit Resultaterfassung, Gruppen, Ranglisten, Berichten und klarer Auswertung in einem Ablauf.</p>
-              <div class="check-list compact-list">
-                <div class="check-item"><span class="check-icon">✓</span><span>Teilnehmer, Standblätter und Resultate</span></div>
-                <div class="check-item"><span class="check-icon">✓</span><span>Gruppen, Ranglisten, Statistiken und Berichte</span></div>
-                <div class="check-item"><span class="check-icon">✓</span><span>Sauberer Ablauf für Vereinsanlässe und Wettkämpfe</span></div>
-              </div>
-            </div>
-            <img class="card-image showcase-image" src="assets/module_anlass_clean.jpg" alt="Schütze mit Laptop und Resultatübersicht im Schützenhaus">
-          </article>
-
-          <article class="module-card showcase-card">
-            <div class="card-body">
-              <div class="module-label">Modul 2</div>
-              <h3>Feldschiessen /<br>Obligatorisches Schiessen</h3>
-              <p>Für den laufenden Betrieb am Schiesstag – direkt, verständlich und auf die Praxis von Feldschiessen und Obligatorischem Schiessen in der Schweiz ausgerichtet.</p>
-              <div class="check-list compact-list">
-                <div class="check-item"><span class="check-icon">✓</span><span>Standblatt Feldschiessen und Standblatt OP</span></div>
-                <div class="check-item"><span class="check-icon">✓</span><span>Standardgewehr, STGW 90 / 57-03 und Pistole</span></div>
-                <div class="check-item"><span class="check-icon">✓</span><span>Auswertungen, Berichte und SAT-nahe Abläufe</span></div>
-              </div>
-            </div>
-            <img class="card-image showcase-image" src="assets/module_feld_clean.jpg" alt="Pistolenschütze im Schweizer Schiesssport">
-          </article>
-
-          <article class="module-card showcase-card">
-            <div class="card-body">
-              <div class="module-label">Modul 3</div>
-              <h3>Verein intern</h3>
-              <p>Alles, was ein Verein intern braucht – Mitglieder, Meisterschaften, Abrechnungen, Munitionsabrechnung, Statistiken und ein sauber geführter digitaler Vereinsalltag.</p>
-              <div class="check-list compact-list">
-                <div class="check-item"><span class="check-icon">✓</span><span>Interne Abrechnungen und Munitionsabrechnung</span></div>
-                <div class="check-item"><span class="check-icon">✓</span><span>Mitgliederverwaltung und Meisterschaften</span></div>
-                <div class="check-item"><span class="check-icon">✓</span><span>Interne Ranglisten und Vereinsübersichten</span></div>
-              </div>
-            </div>
-            <img class="card-image showcase-image" src="assets/module_verein_clean.jpg" alt="Vereinsmitglieder mit Laptop und Resultatlisten">
-          </article>
-        </div>
+        <div class="module-grid module-grid-showcase" id="module-grid"></div>
       </div>
     </section>
 
@@ -113,19 +59,13 @@
       <div class="container-wide">
         <div class="promo-band">
           <div class="promo-copy">
-            <span class="eyebrow">Warum SwissTarget?</span>
-            <h2>Nicht nur OP / Feldschiessen. Nicht nur Vereinswettkämpfe.</h2>
-            <p class="lead">
-              Sondern eine durchgehende Plattform für den ganzen Schiesssport-Alltag. mySwissTarget.ch verbindet reale Vereinsprozesse, Resultate, Abrechnungen und Freischaltungen in einem System – modern im Auftritt und klar in der Bedienung.
-            </p>
-            <div class="compare-grid">
-              <div class="compare-point"><strong>Eine Plattform</strong><span>Anlass, OP / Feldschiessen und Verein intern arbeiten zusammen.</span></div>
-              <div class="compare-point"><strong>Für die Schweiz gebaut</strong><span>Begriffe, Disziplinen und Abläufe passen zum Schweizer Schiesssport.</span></div>
-              <div class="compare-point"><strong>Sauber vermarktet</strong><span>Verkaufsseite, Bestellung, Probeabo und Kundenbereich greifen logisch ineinander.</span></div>
-            </div>
+            <span class="eyebrow" id="why-eyebrow">Warum SwissTarget?</span>
+            <h2 id="why-title">Nicht nur OP / Feldschiessen. Nicht nur Vereinswettkämpfe.</h2>
+            <p class="lead" id="why-lead">Sondern eine durchgehende Plattform für den ganzen Schiesssport-Alltag. mySwissTarget.ch verbindet reale Vereinsprozesse, Resultate, Abrechnungen und Freischaltungen in einem System – modern im Auftritt und klar in der Bedienung.</p>
+            <div class="compare-grid" id="compare-grid"></div>
           </div>
           <figure class="promo-visual">
-            <img src="assets/section_platform_clean.jpg" alt="Schweizer Schiesssport mit Resultatübersicht und Vereinsarbeit">
+            <img id="why-image" src="assets/section_platform_clean.jpg" alt="Schweizer Schiesssport mit Resultatübersicht und Vereinsarbeit">
           </figure>
         </div>
       </div>
@@ -134,118 +74,125 @@
     <section class="section section-soft" id="disziplinen">
       <div class="container-wide">
         <div class="section-headline center-text">
-          <span class="eyebrow">Disziplinen im System</span>
-          <h2>Für Gewehr, Pistole, Kleinkaliber und Luftdruck</h2>
-          <p class="lead max-copy">
-            mySwissTarget.ch deckt die relevanten Disziplin-Lizenzen im Schweizer Schiesssport ab und verbindet sie mit Vereinslogik, Anlassverwaltung und professionellem Abo- / Freischaltprozess.
-          </p>
+          <span class="eyebrow" id="disciplines-eyebrow">Disziplinen im System</span>
+          <h2 id="disciplines-title">Für Gewehr, Pistole, Kleinkaliber und Luftdruck</h2>
+          <p class="lead max-copy" id="disciplines-lead">mySwissTarget.ch deckt die relevanten Disziplin-Lizenzen im Schweizer Schiesssport ab und verbindet sie mit Vereinslogik, Anlassverwaltung und professionellem Abo- / Freischaltprozess.</p>
         </div>
-        <div class="discipline-grid">
-          <div class="discipline-card"><strong>G300</strong><span>Gewehr 300m</span></div>
-          <div class="discipline-card"><strong>G50</strong><span>Gewehr 50m Kleinkaliber</span></div>
-          <div class="discipline-card"><strong>G10</strong><span>Gewehr 10m Luftgewehr</span></div>
-          <div class="discipline-card"><strong>P50</strong><span>Pistole 50m</span></div>
-          <div class="discipline-card"><strong>P25</strong><span>Pistole 25m</span></div>
-          <div class="discipline-card"><strong>P10</strong><span>Pistole 10m Luftpistole</span></div>
-          <div class="discipline-card"><strong>Standardgewehr</strong><span>Vereins- und Anlassbetrieb</span></div>
-          <div class="discipline-card"><strong>STGW 90 / 57-03</strong><span>Ideal für Feldschiessen und OP</span></div>
-        </div>
+        <div class="discipline-grid" id="discipline-grid"></div>
       </div>
     </section>
 
     <section class="section" id="preise">
       <div class="container-wide">
         <div class="section-headline center-text">
-          <span class="eyebrow">Preise</span>
-          <h2>Klar, fair und vereinsfreundlich</h2>
-          <p class="lead max-copy">
-            Ein Grundpaket, ein Pro-Paket und ein kostenloser Testmonat – genau so, dass Vereine schnell starten, fair bezahlen und bei Bedarf direkt erweitert werden können.
-          </p>
+          <span class="eyebrow" id="prices-eyebrow">Preise</span>
+          <h2 id="prices-title">Klar, fair und vereinsfreundlich</h2>
+          <p class="lead max-copy" id="prices-lead">Ein Grundpaket, ein Pro-Paket und ein kostenloser Testmonat – genau so, dass Vereine schnell starten, fair bezahlen und bei Bedarf direkt erweitert werden können.</p>
         </div>
-        <div class="pricing-grid">
-          <article class="price-card">
-            <h3>SwissTarget Verein</h3>
-            <div class="price-value">CHF 25</div>
-            <div class="price-note">pro Monat</div>
-            <ul>
-              <li>Anlass</li>
-              <li>Feldschiessen / Obligatorisches Schiessen</li>
-              <li>Verein intern</li>
-              <li>Updates und Standard-Support</li>
-            </ul>
-          </article>
-          <article class="price-card">
-            <h3>Pro-Paket</h3>
-            <div class="price-value">+ CHF 10</div>
-            <div class="price-note">pro Monat</div>
-            <ul>
-              <li>SAT-Admin</li>
-              <li>SIUS / Schiessanlagen-Schnittstelle</li>
-              <li>Erweiterte Auswertungen</li>
-              <li>Jahresmeisterschaft / Premium-Funktionen</li>
-            </ul>
-          </article>
-          <article class="price-card featured-price">
-            <h3>Start</h3>
-            <div class="price-value">1 Monat</div>
-            <div class="price-note">kostenlos testen</div>
-            <ul>
-              <li>Zahlung per Rechnung, TWINT oder Karte</li>
-              <li>Vereinsfreundlicher Einstieg</li>
-              <li>Direkte Freischaltung nach Bestellablauf</li>
-            </ul>
-            <a class="btn btn-block" href="bestellung.html">Jetzt bestellen</a>
-          </article>
-        </div>
+        <div class="pricing-grid" id="pricing-grid"></div>
       </div>
     </section>
 
-    <section class="section section-soft" id="admin-abo">
+    <section class="section" id="admin-abo">
       <div class="container-wide">
         <div class="promo-band promo-band-reverse">
           <figure class="promo-visual">
-            <img src="assets/section_pricing_clean.jpg" alt="Schweizer Schiesssport im Schützenhaus mit Laptop und Auswertung">
+            <img id="order-image" src="assets/module_anlass_clean.jpg" alt="Bestellablauf und Vereinsverwaltung in mySwissTarget.ch">
           </figure>
           <div class="promo-copy">
-            <span class="eyebrow">Bestellen &amp; Abo</span>
-            <h2>Ein sauberer Bestellablauf statt unnötig komplizierter Verwaltung</h2>
-            <p class="lead">
-              Kunden, Abos, Probeabos, Zahlungen und Freischaltungen werden sauber geführt – damit Support, Vereine und Organisatoren sofort sehen, was aktiv ist, was getestet wird und was freigeschaltet werden muss.
-            </p>
-            <div class="check-list compact-list">
-              <div class="check-item"><span class="check-icon">✓</span><span>Probeabo starten, Paket wählen und Verein erfassen</span></div>
-              <div class="check-item"><span class="check-icon">✓</span><span>Zahlung per Rechnung, TWINT oder Karte</span></div>
-              <div class="check-item"><span class="check-icon">✓</span><span>Admin- und Kundenbereich für Status, Zahlungen und Freischaltung</span></div>
-            </div>
-            <div class="hero-actions">
-              <a class="secondary-btn" href="adminbereich.html">Adminbereich ansehen</a>
-              <a class="btn" href="bestellung.html">Bestellformular öffnen</a>
+            <span class="eyebrow" id="order-eyebrow">Bestellen &amp; Abo</span>
+            <h2 id="order-title">Ein sauberer Bestellablauf statt unnötig komplizierter Verwaltung</h2>
+            <p class="lead" id="order-lead">Kunden, Abos, Probeabo, Zahlungen und Freischaltungen werden sauber geführt – damit Support, Vereine und Organisatoren sofort sehen, was aktiv ist, was getestet wird und was freigeschaltet werden muss.</p>
+            <div class="step-grid" id="order-steps"></div>
+            <div class="hero-actions compact-actions">
+              <a class="btn btn-light" href="adminbereich.html" id="admin-link">Adminbereich ansehen</a>
+              <a class="btn" href="bestellung.html" id="order-link">Bestellformular öffnen</a>
+              <a class="secondary-btn" href="kundenbereich.html" id="customer-link">Kundenbereich ansehen</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section faq-section">
-      <div class="container-wide narrow-container">
-        <div class="section-headline center-text">
-          <span class="eyebrow">FAQ</span>
-          <h2>Häufige Fragen zur Plattform</h2>
-        </div>
-        <div class="faq-grid">
-          <article class="faq-card"><h3>Für wen ist mySwissTarget.ch gedacht?</h3><p>Für Vereine, Organisatoren, Schiessverwalter und Schützenhäuser, die Anlass, OP / Feldschiessen und Verein intern digital in einer Plattform führen wollen.</p></article>
-          <article class="faq-card"><h3>Wie funktioniert die Freischaltung?</h3><p>Über Probeabo, Zahlung per Rechnung, TWINT oder Karte. Danach bleibt das System aktiv und der Verein kann direkt starten.</p></article>
-          <article class="faq-card"><h3>Welche Disziplinen deckt das System ab?</h3><p>Standardgewehr, STGW 90 / 57-03, Pistole, Kleinkaliber, Luftgewehr, Luftpistole und weitere Bereiche im Vereinsalltag.</p></article>
-          <article class="faq-card"><h3>Gibt es einen Admin- und Kundenbereich?</h3><p>Ja. Für Kunden, Abos, Zahlungen, Freischaltungen und Support. In dieser Website-Version ist er als klickbare Demo vorbereitet.</p></article>
+    <section class="section section-soft" id="trust">
+      <div class="container-wide">
+        <div class="trust-grid">
+          <div class="trust-card">
+            <strong>Für Schweizer Vereine gebaut</strong>
+            <span>Begriffe, Disziplinen und Prozesse passen zum Schweizer Schiesssport-Alltag.</span>
+          </div>
+          <div class="trust-card">
+            <strong>1 Monat kostenlos testen</strong>
+            <span>Einfach starten, Verein erfassen und den gesamten Ablauf ohne Hürden prüfen.</span>
+          </div>
+          <div class="trust-card">
+            <strong>Zahlung flexibel</strong>
+            <span>Rechnung, TWINT oder Karte – genau so, wie Vereine und Organisatoren es brauchen.</span>
+          </div>
+          <div class="trust-card">
+            <strong>Klarer Kunden- und Adminbereich</strong>
+            <span>Status, Abos, Zahlungen und Freischaltungen sauber und verständlich im Blick behalten.</span>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="section" id="faq">
+      <div class="container-wide">
+        <div class="section-headline center-text">
+          <span class="eyebrow" id="faq-eyebrow">FAQ</span>
+          <h2 id="faq-title">Häufige Fragen zur Plattform</h2>
+        </div>
+        <div class="faq-grid" id="faq-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="container-wide">
+        <div class="contact-band">
+          <div class="contact-copy">
+            <span class="eyebrow" id="contact-eyebrow">Kontakt & Demo</span>
+            <h2 id="contact-title">Bereit für einen sauberen Start mit SwissTarget?</h2>
+            <p class="lead" id="contact-lead">Lass dir die Plattform zeigen, starte das Probeabo oder nimm direkt Kontakt auf. So wird aus der Verkaufsseite ein echter Einstieg für Vereine, Organisatoren und Schützenhäuser.</p>
+            <div class="hero-actions compact-actions">
+              <a class="btn" id="contact-primary" href="bestellung.html">Probeabo starten</a>
+              <a class="btn btn-light" id="contact-secondary" href="mailto:info@myswisstarget.ch">Kontakt aufnehmen</a>
+            </div>
+          </div>
+          <div class="contact-meta">
+            <div class="trust-card">
+              <strong id="contact-box-1-title">Schnelle Demo</strong>
+              <span id="contact-box-1-text">Zeige Anlass, Feldschiessen / OP und Verein intern direkt im echten Ablauf.</span>
+            </div>
+            <div class="trust-card">
+              <strong id="contact-box-2-title">Vereinsfreundliche Einführung</strong>
+              <span id="contact-box-2-text">Probeabo, Rechnung, TWINT oder Karte – so wie Vereine es im Alltag brauchen.</span>
+            </div>
+            <div class="trust-card">
+              <strong id="contact-box-3-title">Saubere Freischaltung</strong>
+              <span id="contact-box-3-text">Kundenbereich, Adminbereich und Bestelllogik greifen logisch ineinander.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="container-wide footer-inner">
-      <img class="footer-logo" src="assets/logo-full.png" alt="mySwissTarget.ch Logo">
-      <p>mySwissTarget.ch – die Schweizer Plattform für Anlass, Feldschiessen / Obligatorisches Schiessen und Verein intern.</p>
+    <div class="container-wide footer-inner footer-inner-rich">
+      <div class="footer-branding">
+        <img class="footer-logo" src="assets/logo-full.png" alt="mySwissTarget.ch Logo">
+        <p id="footer-tagline">mySwissTarget.ch – die Schweizer Plattform für Anlass, Feldschiessen / Obligatorisches Schiessen und Verein intern.</p>
+      </div>
+      <div class="footer-links">
+        <a href="kundenbereich.html">Kundenbereich</a>
+        <a href="adminbereich.html">Adminbereich</a>
+        <a href="mailto:info@myswisstarget.ch" id="footer-mail">info@myswisstarget.ch</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+        <a href="#">AGB</a>
+      </div>
     </div>
   </footer>
 
